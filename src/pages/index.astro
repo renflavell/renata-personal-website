@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="container hero-layout">
+      <div class="hero-copy">
+        <p class="eyebrow">Marketing • Social • Production</p>
+        <h1>Renata Flavell</h1>
+        <p class="lead">
+          I turn ideas into thoughtful, compelling stories that feel polished, personal, and ready to perform.
+        </p>
+        <div class="hero-actions" aria-label="Primary actions">
+          <ButtonLink href="/work" variant="primary">View my work</ButtonLink>
+          <ButtonLink href="/contact" variant="secondary">Get in touch</ButtonLink>
+        </div>
+      </div>
+
+      <div class="hero-visual leopard-accent">
+        <img
+          src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+          alt="Renata in a creative professional setting"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container narrow">
+      <SectionHeader
+        eyebrow="Introduction"
+        title="Warm energy, clear thinking, and creative momentum."
+        intro="I’m a creative professional with a strong eye for brand storytelling, social strategy, and smooth production execution. I love bringing ideas to life in a way that feels both strategic and visually rich."
+      />
+    </div>
+  </section>
+
+  <section class="page-section alt-bg">
+    <div class="container">
+      <div class="spotlight-grid">
+        <article class="info-card leopard-accent">
+          <p class="eyebrow">What I do</p>
+          <h3>Campaigns, content, and creative direction</h3>
+          <p>
+            From social planning and copy direction to production coordination and polished execution, I build work that looks refined and performs with intention.
+          </p>
+        </article>
+
+        <article class="info-card leopard-accent">
+          <p class="eyebrow">How I work</p>
+          <h3>Creative with structure</h3>
+          <p>
+            I balance strategic thinking with a human, approachable style, creating content systems that are useful, expressive, and easy for teams to build on.
+          </p>
+        </article>
+
+        <article class="info-card leopard-accent">
+          <p class="eyebrow">What I bring</p>
+          <h3>Storytelling that feels premium</h3>
+          <p>
+            My background blends marketing mindset, brand understanding, and production discipline—so every detail works together with clarity and personality.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <SectionHeader
+        eyebrow="Quick links"
+        title="Explore the full story."
+      />
+
+      <div class="link-grid">
+        <a href="/work" class="mini-card leopard-accent">
+          <span class="mini-label">Work</span>
+          <strong>See the projects and campaigns.</strong>
+        </a>
+        <a href="/education" class="mini-card leopard-accent">
+          <span class="mini-label">Education</span>
+          <strong>View training and qualifications.</strong>
+        </a>
+        <a href="/skills" class="mini-card leopard-accent">
+          <span class="mini-label">Skills</span>
+          <strong>Discover the areas I bring value.</strong>
+        </a>
+        <a href="/contact" class="mini-card leopard-accent">
+          <span class="mini-label">Contact</span>
+          <strong>Get in touch and connect.</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

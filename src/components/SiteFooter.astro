@@ -1,0 +1,28 @@
+---
+const year = new Date().getFullYear();
+const socialLinks = [
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/your-linkedin-profile' },
+  { label: 'CV', href: '/cv.pdf' },
+];
+---
+
+<footer class="site-footer">
+  <div class="container footer-shell">
+    <div>
+      <p class="eyebrow">Renata Flavell</p>
+      <p class="footer-copy">Creative marketing, social media, and production professional.</p>
+    </div>
+
+    <div class="footer-links" aria-label="Social links and downloads">
+      {socialLinks.map((link) => (
+        <a href={link.href} target={link.href.startsWith('http') ? '_blank' : undefined} rel={link.href.startsWith('http') ? 'noreferrer' : undefined}>
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© {year} Renata Flavell</p>
+  </div>
+</footer>

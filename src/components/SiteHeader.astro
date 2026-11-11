@@ -1,0 +1,36 @@
+---
+import ButtonLink from './ButtonLink.astro';
+
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Work', href: '/work' },
+  { label: 'Education', href: '/education' },
+  { label: 'Skills', href: '/skills' },
+  { label: 'Contact', href: '/contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="/" aria-label="Renata Flavell home">
+      <span class="brand-mark">RF</span>
+      <span class="brand-text">Renata Flavell</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class:list={['nav-link', { 'is-current': currentPath === item.href }]}
+          aria-current={currentPath === item.href ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <ButtonLink href="/contact" variant="primary">Let’s talk</ButtonLink>
+  </div>
+</header>

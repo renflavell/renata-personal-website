@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+---
+
+<BaseLayout title="Contact | Renata Flavell">
+  <section class="page-section top-space">
+    <div class="container narrow">
+      <SectionHeader
+        eyebrow="Contact"
+        title="Let’s create something thoughtful and memorable."
+        intro="I’m open to new opportunities, collaborations, and creative conversations. If you’d like to connect, I’d love to hear from you."
+      />
+    </div>
+  </section>
+
+  <section class="page-section alt-bg">
+    <div class="container contact-grid">
+      <article class="contact-card leopard-accent">
+        <p class="eyebrow">Email</p>
+        <h3>hello@renataflavell.com</h3>
+        <a href="mailto:hello@renataflavell.com">Send an email</a>
+      </article>
+
+      <article class="contact-card leopard-accent">
+        <p class="eyebrow">LinkedIn</p>
+        <h3>Profile</h3>
+        <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank" rel="noreferrer">Visit LinkedIn</a>
+      </article>
+
+      <article class="contact-card leopard-accent">
+        <p class="eyebrow">CV</p>
+        <h3>Download my CV</h3>
+        <a href="/cv.pdf">View CV</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container contact-cta">
+      <p class="eyebrow">Next step</p>
+      <h3>Let’s talk about brand storytelling, campaign ideas, or creative production.</h3>
+      <ButtonLink href="mailto:hello@renataflavell.com" variant="primary">Email me</ButtonLink>
+    </div>
+  </section>
+</BaseLayout>
